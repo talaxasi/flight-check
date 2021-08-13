@@ -1,0 +1,78 @@
+{
+  "flights": [
+    {
+      "date": "01-01",
+      "list": [
+        {
+          "time": "14:50",
+          "price": "23 900",
+          "company": "Aeroflot"
+        },
+        {
+          "time": "17:25",
+          "price": "22 500",
+          "company": "Delta"
+        },
+        {
+          "time": "19:30",
+          "price": "30 000",
+          "company": "Luft Hansa"
+        }
+      ]
+    },
+    {
+      "date": "01-02",
+      "list": [
+        {
+          "time": "09:00",
+          "price": "22 750",
+          "company": "Aeroflot"
+        },
+        {
+          "time": "15:20",
+          "price": "23 000",
+          "company": "Aeroflot"
+        },
+        {
+          "time": "19:30",
+          "price": "30 000",
+          "company": "Luft Hansa"
+        }
+      ]
+    },
+    {
+      "date": "01-03",
+      "list": [
+        {
+          "time": "08:50",
+          "price": "25 900",
+          "company": "Delta"
+        },
+        {
+          "time": "11:40",
+          "price": "22 500",
+          "company": "Delta"
+        },
+        {
+          "time": "13:25",
+          "price": "45 200",
+          "company": "Fly Emirates"
+        },
+        {
+          "time": "15:00",
+          "price": "30 200",
+          "company": "Aeroflot"
+        },
+        {
+          "time": "17:20",
+          "price": "33 500",
+          "company": "Aeroflot"
+        }
+      ]
+    }
+  ],
+  "users" : [
+
+  ]
+}
+
