@@ -3,38 +3,13 @@ import './Auth.scss';
 import axios from "axios";
 
 const Auth = () => {
-
   const [login, setLogin] = useState('');
   const [password, setPassword] = useState('');
 
-  const InputBlock = (
-      {
-        title,
-        type,
-        errorMessage,
-        modifier,
-        onChange,
-        value,
-        onBlur
-      }) => {
-
-    return (
-        <div className={`input-block ${modifier}`}>
-          <p className={"input-block__title"}>{title}</p>
-          <input className={"input-block__input"}
-                 type={type}
-                 onBlur={onBlur}
-                 value={value}
-                 onChange={onChange}/>
-          <p className={"input-block__error-message"}>{errorMessage}</p>
-        </div>
-    )
-  }
-
   const handleChange = e => {
     const name = e.target.previousElementSibling.innerHTML;
-    if (name === 'Логин') setLogin(e.target.value)
-    console.log(login)
+    if (name === 'Логин:') setLogin(e.target.value);
+    if (name === 'Пароль:') setPassword(e.target.value);
   }
 
   const fetchFlightDate = async (month, day) => {
@@ -58,8 +33,25 @@ const Auth = () => {
       <div className={"Auth"}>
         <form className={"form"} onSubmit={handleSubmit}>
           <h2 className={"form__title"}>Simple Flight Check</h2>
-          <InputBlock key={1} type={'text'} title={'Логин'} onChange={handleChange} value={login}/>
-          <InputBlock type={'password'} title={'Пароль'} onChange={handleChange} value={password}/>
+
+          <div className={`input-block`}>
+            <p className={"input-block__title"}>Логин:</p>
+            <input className={"input-block__input"}
+                   type={'text'}
+                   value={login}
+                   onChange={handleChange}/>
+            <p className={"input-block__error-message"}>Message error</p>
+          </div>
+
+          <div className={`input-block`}>
+            <p className={"input-block__title"}>Пароль:</p>
+            <input className={"input-block__input"}
+                   type={'password'}
+                   value={password}
+                   onChange={handleChange}/>
+            <p className={"input-block__error-message"}>Message error</p>
+          </div>
+
           <input className={"form__submit"}
                  type={'submit'}
                  value={'Войти'}/>
