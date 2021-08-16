@@ -1,5 +1,4 @@
-import {AUTH_FAILURE, AUTH_SUCCESS} from "../types";
-
+import {AUTH_FAILURE, AUTH_LOGOUT, AUTH_SUCCESS} from "../types";
 
 const initialState = {};
 
@@ -14,6 +13,8 @@ export const authReducer = (state = initialState, action) => {
       return {
         error: action.payload
       }
+    case AUTH_LOGOUT :
+      return {}
     default: return state
   }
 }

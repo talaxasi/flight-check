@@ -67,12 +67,115 @@
           "time": "17:20",
           "price": "33 500",
           "company": "Aeroflot"
+        },
+        {
+          "time": "17:40",
+          "price": "25 900",
+          "company": "Delta"
+        },
+        {
+          "time": "19:00",
+          "price": "22 500",
+          "company": "Delta"
+        },
+        {
+          "time": "20:30",
+          "price": "45 200",
+          "company": "Fly Emirates"
+        },
+        {
+          "time": "21:25",
+          "price": "30 200",
+          "company": "Aeroflot"
+        },
+        {
+          "time": "23:00",
+          "price": "33 500",
+          "company": "Aeroflot"
         }
       ]
     }
   ],
-  "users" : [
-
+  "users": [
+    {
+      "login": "ok@ok.ru",
+      "password": "11111111",
+      "id": 1
+    },
+    {
+      "login": "test@test.js",
+      "password": "22222222",
+      "id": 2
+    },
+    {
+      "login": "test@test.js",
+      "password": "22222222",
+      "id": 3
+    },
+    {
+      "login": "test1@ok.js",
+      "password": "33333333",
+      "id": 4
+    },
+    {
+      "login": "1@1.js",
+      "password": "11111111",
+      "id": 5
+    },
+    {
+      "login": "11@111.ru",
+      "password": "11122345",
+      "id": 6
+    },
+    {
+      "login": "monk@ey.com",
+      "password": "11111111",
+      "id": 7
+    },
+    {
+      "login": "test@test.test",
+      "password": "test1234",
+      "id": 8
+    },
+    {
+      "login": "k@k.ru",
+      "password": "1111111111",
+      "id": 9
+    },
+    {
+      "login": "test3@test.js",
+      "password": "11123445",
+      "id": 10
+    },
+    {
+      "login": "ok@ok.ru",
+      "password": "11111111",
+      "id": 11
+    },
+    {
+      "login": "k@k.ru",
+      "password": "11111111",
+      "id": 12
+    },
+    {
+      "login": "s@s.ru",
+      "password": "22222222",
+      "id": 13
+    },
+    {
+      "login": "m@m.ru",
+      "password": "12345678",
+      "id": 14
+    },
+    {
+      "login": "s@s.ru",
+      "password": "11111111",
+      "id": 15
+    },
+    {
+      "login": "k@k.ru",
+      "password": "11111111",
+      "id": 16
+    }
   ]
 }
-
