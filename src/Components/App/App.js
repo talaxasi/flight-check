@@ -5,7 +5,7 @@ import Auth from "../Auth/Auth";
 import FlightsList from "../FlightsList/FlightsList";
 import {useDispatch, useSelector} from "react-redux";
 import {Redirect} from "react-router";
-import {clearFavorite} from "../../store/actions";
+import {clearFavorite, flightDayClear} from "../../store/actions";
 
 const App = () => {
   const authorized = useSelector(state => state.auth.login);
@@ -13,8 +13,11 @@ const App = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    if (!favorites) dispatch(clearFavorite())
-  }, [favorites])
+    if (!authorized) {
+      dispatch(clearFavorite());
+      dispatch(flightDayClear());
+    }
+  }, [authorized])
 
   return (
       <div className={"App"}>

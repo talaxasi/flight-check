@@ -2,7 +2,7 @@ import {
   AUTH_FAILURE,
   AUTH_LOGOUT,
   AUTH_REQUEST,
-  AUTH_SUCCESS, FLIGHT_DATE_ADD_FAVORITE, FLIGHT_DATE_CLEAR_FAVORITE,
+  AUTH_SUCCESS, FLIGHT_DATE_ADD_FAVORITE, FLIGHT_DATE_CLEAR, FLIGHT_DATE_CLEAR_FAVORITE,
   FLIGHT_DATE_FAILURE, FLIGHT_DATE_REMOVE_FAVORITE,
   FLIGHT_DATE_REQUEST,
   FLIGHT_DATE_SUCCESS
@@ -34,6 +34,8 @@ export const flightDayFailure = error => ({
   type: FLIGHT_DATE_FAILURE,
   payload: error
 })
+export const flightDayClear = () => ({type: FLIGHT_DATE_CLEAR})
+
 export const addFavorite = favorite => ({
   type: FLIGHT_DATE_ADD_FAVORITE,
   payload: favorite

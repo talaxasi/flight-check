@@ -176,6 +176,41 @@
       "login": "k@k.ru",
       "password": "11111111",
       "id": 16
+    },
+    {
+      "login": "al@al.ru",
+      "password": "11234567",
+      "id": 17
+    },
+    {
+      "login": "ok@ok.ru",
+      "password": "22222222",
+      "id": 18
+    },
+    {
+      "login": "ok@ok.ru",
+      "password": "11111111",
+      "id": 19
+    },
+    {
+      "login": "k@k.ru",
+      "password": "11111111",
+      "id": 20
+    },
+    {
+      "login": "s@s.ru",
+      "password": "12345678",
+      "id": 21
+    },
+    {
+      "login": "test@test.ru",
+      "password": "11111111",
+      "id": 22
+    },
+    {
+      "login": "test@test.ru",
+      "password": "11111111",
+      "id": 23
     }
   ]
 }

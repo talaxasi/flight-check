@@ -1,4 +1,5 @@
 import {
+  FLIGHT_DATE_CLEAR,
   FLIGHT_DATE_FAILURE,
   FLIGHT_DATE_SUCCESS
 } from "../types";
@@ -14,6 +15,8 @@ export const flightDateReducer = (state = initialState, action) => {
       }
     case FLIGHT_DATE_FAILURE :
       return {error: action.payload}
+    case FLIGHT_DATE_CLEAR :
+      return {}
     default : return state;
   }
 }
