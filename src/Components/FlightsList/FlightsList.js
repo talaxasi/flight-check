@@ -8,24 +8,6 @@ import {
   removeFavorite
 } from "../../store/actions";
 import Slider from "../Carousel/Slider";
-import axios from "axios";
-
-const options = {
-  method: 'GET',
-  url: 'https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/browseroutes/v1.0/US/RUB/en-US/SVO-sky/JFK-sky/2021-09-13',
-  headers: {
-    'x-rapidapi-host': 'skyscanner-skyscanner-flight-search-v1.p.rapidapi.com',
-    'x-rapidapi-key': '3b2785777dmsh518dda8487445ffp186a9fjsna4d0c340d2e0'
-  }
-};
-
-
-// axios.request(options).then(function (response) {
-//   console.log(response.data);
-// }).catch(function (error) {
-//   console.error(error);
-// });
-
 
 const FlightsList = () => {
   const [date, setDate] = useState([]);
@@ -35,6 +17,16 @@ const FlightsList = () => {
 
   const handleExitClick = e => {
     dispatch(authLogout());
+  }
+
+  const separatePrice = price => {
+    const arr = price.split('');
+    if (arr.length >= 5) {
+      arr.splice(2, 0, ' ');
+      return arr.join('')
+    }
+    arr.splice(1, 0, ' ');
+    return arr.join('')
   }
 
   const handleChangeCalendar = e => {
@@ -122,7 +114,7 @@ const FlightsList = () => {
 
                           <div className={"flight-card__price-container"}>
                             <p className={"flight-card__price"}>Price:</p>
-                            <p className={"flight-card__amount"}>{price} ₽</p>
+                            <p className={"flight-card__amount"}>{separatePrice(price)} ₽</p>
                           </div>
                         </div>
 

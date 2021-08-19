@@ -20,7 +20,7 @@ function* flightDateSagaWorker({payload}) {
       date: `${year}-${month}-${day}`,
       flightsList: response.data.Quotes.map(quote => ({
         time: '00:00',
-        price: quote.MinPrice,
+        price: quote.MinPrice.toString(),
         company: response.data.Carriers.filter(carrier => carrier.CarrierId === quote.OutboundLeg.CarrierIds[0])[0].Name
       }))
     }
