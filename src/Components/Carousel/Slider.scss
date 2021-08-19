@@ -1,0 +1,15 @@
+.arrow-right, .arrow-left {
+  height: 100%;
+  width: 83px;
+  position: absolute;
+  background: transparent linear-gradient(270deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0) 25%);
+}
+
+.arrow-right {
+  right: 0;
+}
+
+.arrow-left {
+  left: 0;
+  background: transparent linear-gradient(90deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0) 25%);
+}

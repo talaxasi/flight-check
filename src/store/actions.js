@@ -22,9 +22,9 @@ export const authRequest = props => ({
 })
 export const authLogout = () => ({type: AUTH_LOGOUT})
 
-export const flightDayRequest = ({day, month}) => ({
+export const flightDayRequest = ({day, month, year}) => ({
   type: FLIGHT_DATE_REQUEST,
-  payload: {day, month}
+  payload: {day, month, year}
 })
 export const flightDaySuccess = ({date, flightsList}) => ({
   type: FLIGHT_DATE_SUCCESS,

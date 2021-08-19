@@ -25,8 +25,27 @@ const Slider = () => {
     }
   };
 
+  const CustomRightArrow = ({ onClick, ...rest }) => {
+    const {
+      onMove,
+      carouselState: { currentSlide, deviceType }
+    } = rest;
+    return <button className={"arrow-right"} onClick={() => onClick()} />;
+  };
+
+  const CustomLeftArrow = ({ onClick, ...rest }) => {
+    const {
+      onMove,
+      carouselState: { currentSlide, deviceType }
+    } = rest;
+    return <button className={"arrow-left"} onClick={() => onClick()} />;
+  };
+
   return (
-        <Carousel responsive={responsive} itemClass={"Carousel__item"}>
+        <Carousel responsive={responsive}
+                  itemClass={"Carousel__item"}
+                  customLeftArrow={<CustomLeftArrow/>}
+                  customRightArrow={<CustomRightArrow/>}>
           {assets.map((img, id) => (
               <div className={"Carousel__item"} key={id}>
                 <img src={img.default}/>

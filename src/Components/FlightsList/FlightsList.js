@@ -7,8 +7,25 @@ import {
   flightDayRequest,
   removeFavorite
 } from "../../store/actions";
-import Carousel from "../Carousel/Slider";
 import Slider from "../Carousel/Slider";
+import axios from "axios";
+
+const options = {
+  method: 'GET',
+  url: 'https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/browseroutes/v1.0/US/RUB/en-US/SVO-sky/JFK-sky/2021-09-13',
+  headers: {
+    'x-rapidapi-host': 'skyscanner-skyscanner-flight-search-v1.p.rapidapi.com',
+    'x-rapidapi-key': '3b2785777dmsh518dda8487445ffp186a9fjsna4d0c340d2e0'
+  }
+};
+
+
+// axios.request(options).then(function (response) {
+//   console.log(response.data);
+// }).catch(function (error) {
+//   console.error(error);
+// });
+
 
 const FlightsList = () => {
   const [date, setDate] = useState([]);
@@ -23,7 +40,8 @@ const FlightsList = () => {
   const handleChangeCalendar = e => {
     const dateNumeric = e.target.valueAsDate.toLocaleString('ru', {
       month: 'numeric',
-      day: 'numeric'
+      day: 'numeric',
+      year: 'numeric'
     }).split('.');
     const dateLong = e.target.valueAsDate.toLocaleString('ru', {
       year: 'numeric',
@@ -34,7 +52,8 @@ const FlightsList = () => {
     setDate(dateLong);
     dispatch(flightDayRequest({
       day: dateNumeric[0],
-      month: dateNumeric[1]
+      month: dateNumeric[1],
+      year: dateNumeric[2]
     }))
   }
 
@@ -78,7 +97,7 @@ const FlightsList = () => {
               <div className={"list-main__container"}>
                 {flightDate.date ? flightDate.flightsList.map(item => {
                   const {time, price, company} = item;
-                  const id = flightDate.date + time;
+                  const id = flightDate.date + price;
                   return (
                       <div className={"flight-card"} key={id}>
                         <div className={"flight-card__logo"}><span className={"airplane"}/></div>
@@ -98,7 +117,7 @@ const FlightsList = () => {
                           <button className={`flight-card__button-favorite flight-card__button-favorite${
                             favorites.includes(id) ? '_full' : '_hollow'
                           }`}
-                                  id={flightDate.date + time}
+                                  id={flightDate.date + price}
                                   onClick={handleClickFavorite}/>
 
                           <div className={"flight-card__price-container"}>
