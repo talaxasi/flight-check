@@ -226,6 +226,16 @@
       "login": "k@k.ru",
       "password": "44444444",
       "id": 26
+    },
+    {
+      "login": "k@k.ru",
+      "password": "11111111",
+      "id": 27
+    },
+    {
+      "login": "test34@test.js",
+      "password": "12345678",
+      "id": 28
     }
   ]
 }

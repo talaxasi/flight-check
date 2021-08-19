@@ -5,6 +5,7 @@
 
   background-color: #E5E5E5;
   color: #424242;
+  font-family: 'Open Sans', sans-serif;
 
   &__header {
     width: 100%;
@@ -64,6 +65,7 @@
     margin-right: 40px;
     white-space: nowrap;
     position: relative;
+    font-family: 'Roboto', sans-serif;
   }
 
   &__icon-arrow {
@@ -184,6 +186,7 @@
 
   &__date, &__time {
     display: inline-block;
+    font-weight: 400;
   }
 
   &__amount-container {
