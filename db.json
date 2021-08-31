@@ -236,6 +236,26 @@
       "login": "test34@test.js",
       "password": "12345678",
       "id": 28
+    },
+    {
+      "login": "test@test.ru",
+      "password": "12345678",
+      "id": 29
+    },
+    {
+      "login": "k@k.ru",
+      "password": "12345678",
+      "id": 30
+    },
+    {
+      "login": "a@a.ru",
+      "password": "1111111111",
+      "id": 31
+    },
+    {
+      "login": "dfdf@fd.ru",
+      "password": "11111111",
+      "id": 32
     }
   ]
 }
