@@ -1,5 +1,1 @@
-Вместо API skyskanner создал локальный json-server. 
-Запустить: json-server --watch db.json -p 3001
-
-В файле db.json захардкожены даты для обращения: 01.01, 02.01, 03.01,
-для получения списка в календаре выбирайте перечисленные даты.
+Link to Heroku: https://intense-brook-26989.herokuapp.com/
